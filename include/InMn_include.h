@@ -74,6 +74,7 @@ struct InMn_stats_ {
 struct InMn_if_info_ {
     ifaddrs_t          *InMn_if_addrs;
     InMn_stats_t        InMn_stats;
+    FILE               *fp;
     InMn_if_info_t     *next;
 };
 
