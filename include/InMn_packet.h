@@ -34,6 +34,7 @@ struct ethernet_header {
 
 /* IP Header */
 struct ip_header {
+#if 0
 #if __BYTE_ORDER == __LITTLE_ENDIAN
     unsigned int ip_hl:4;       /* header length */
     unsigned int ip_v:4;        /* version */
@@ -42,6 +43,8 @@ struct ip_header {
     unsigned int ip_v:4;        /* version */
     unsigned int ip_hl:4;       /* header length */
 #endif
+#endif
+    u_char   ip_vhl;
     u_int8_t ip_tos;            /* type of service */
     u_short ip_len;         /* total length */
     u_short ip_id;          /* identification */

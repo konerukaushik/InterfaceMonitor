@@ -1,0 +1,12 @@
+-s option to create firewall
+
+-s ""
+
+Options:
+
+-i TCP Options
+
+-o port 2200
+-o netport eth1
+
+

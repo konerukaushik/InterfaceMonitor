@@ -26,7 +26,9 @@
 /* Macro values */
 #define ERROR -1
 #define EOK    0
-
+#define TRUE   1
+#define FALSE  0
+#define bool  int
 
 /* Help Menu */
 #define HELP LOG("Option:") \
@@ -89,5 +91,8 @@ InMn_if_info_t  *InMn_if_info;
  * on NIC
  */
 int Interfaces_count;
+
+
+void InMn_get_output_options(char*);
 
 #endif /* _INMN_INCLUDE_H_ */
