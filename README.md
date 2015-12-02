@@ -8,8 +8,9 @@ In This project we provide a prototype implementation of a firewall in Unix alon
 Execution:
 
 
-InMn -h
-Option:
+
+       InMn -h
+              Option:
        -h -> help
        -p -> Run in Process Model
        -t -> Run in Thread Model
@@ -18,24 +19,25 @@ Option:
        -o -> Provide the output Eg: -o "port 2200" or -o "netport eth1" 
 
 
--s options can be as following
+       -s options can be as following
 
 
 Following are the Filter options can be provided 
 
 
-host host 
+
+       host host 
     True if either the IPv4/v6 source or destination of the packet is host. 
     Any of the above host expressions can be prepended with the keywords, ip, arp, rarp, or ip6 as in: 
+       ip host host
 
-    ip host host
-
-    which is equivalent to: 
+which is equivalent to: 
 
     ether proto \ip and host host
-
     If host is a name with multiple IP addresses, each address will be checked for a match. 
-ether dst ehost
+
+
+       ether dst ehost
     True if the Ethernet destination address is ehost. Ehost may be either a name from /etc/ethers or a number (see ethers(3N) for numeric format). 
 ether src ehost
     True if the Ethernet source address is ehost. 
