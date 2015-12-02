@@ -145,7 +145,7 @@ InMn_pcap_monitor (InMn_if_info_t  *interface_info)
     if (output_filter.output_netport) {
 
 	if (output_filter.O_output_interface != NULL) {
-		if (strncmp(output_filter.O_output_interface, interface_name, strlen(interface_name))) {
+		if (!strncmp(output_filter.O_output_interface, interface_name, strlen(interface_name))) {
 			output_filter.O_output_interface_descrp = descrp;
 		}
 	}
